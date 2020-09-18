@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>介護事業所</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+
+  <!-- Page Content -->
+  <div class="container" style="width: 65%; margin: 0 auto;">
+
+    <!-- Title -->
+    <div class="row pt-3 text-left">
+      <a href="index.html">
+        <img class="img-fluid" src="static/images/mine/logo2.jpg" width="280" height="65" alt="愛希訪問介護事業所" />
+      </a>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="row mt-3">
+      <nav class="col-lg-12 col-sm-12 pl-0 pr-0">
+        <ul class="nav nav-pills nav-fill bg-nav font-weight-bold">
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="index.html">トップ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="visiting-care.html">訪問介護</a>
+          </li>
+          <li class=" nav-item">
+            <a class="nav-link border border-dark" href="welfare-equipment.html">福祉用具</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="company-info.html">会社案内</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="inquire.html">問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- This following cotent will be changed -->
+    <!-- Heading -->
+    <div class="my-4" style="text-align: center;">
+      <h4 style="font-weight: 600; color: darkblue;">
+        お問い合わせはこちらのフォームよりお寄せください。
+      </h4>
+    </div>
+
+    ＊は必須項目です。
+
+    <!-- Form -->
+    <form class="needs-validation mt-3 px-3 py-2" style="background-color: white;" action="checkForm.html" novalidate>
+      <!-- Name -->
+      <div class="form-row mt-1">
+        <label for="inputName">お名前&nbsp;<h style="color: red;">*</h></label>
+        <div class="col-2">
+          <input type=" text" class="form-control" id="inputName1" placeholder="姓" required />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+        <div class="col-2">
+          <input type=" text" class="form-control" id="inputName2" placeholder="名" required />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+
+      <!-- Furigana -->
+      <div class="form-row mt-1">
+        <label for="inputFurigana">フリガナ</label>
+        <div class="col-2">
+          <input type=" text" class="form-control" id="inputFurigana1" placeholder="姓" />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+        <div class="col-2">
+          <input type=" text" class="form-control" id="inputFurigana2" placeholder="名" />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-row mt-1">
+        <label for="inputEmail">メールアドレス&nbsp;<h style="color: red;">*</h></label>
+        <div class="col-4">
+          <input type="email" class="form-control" id="inputEmail" placeholder="nay@gmail.com" required />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+      <div class="form-row mt-1">
+        <label for="inputEmailCheck">メールアドレス確認&nbsp;<h style="color: red;">*</h></label>
+        <div class="col-4">
+          <input type="email" class="form-control" id="inputEmailCheck" placeholder="nay@gmail.com" required />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone No -->
+      <div class="form-row mt-1">
+        <label for="inputPhoneNo">電話番号&nbsp;<h style="color: red;">*</h></label>
+        <div class="col-4">
+          <input type="text" class="form-control" id="inputPhoneNo" placeholder="080-1100-2222" required />
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Code -->
+      <div class="form-row mt-1">
+        <label for="inputPostCode">郵便番号</label>
+        <div class="col-4">
+          <input type="text" class="form-control" id="inputPostCode" placeholder="100-1111" />
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-row mt-1">
+        <label for="inputAddress">ご住所</label>
+        <div class="col">
+          <input type="text" class="form-control" id="inputAddress" placeholder="東京部新宿区片町２０２番８－１１" />
+        </div>
+      </div>
+
+      <!-- Question -->
+      <div class="form-row mt-1">
+        <label for="inputQuestion">お問い合わせ詳細&nbsp;<h style="color: red;">*</h></label>
+        <div class="col">
+          <textarea type="text" class="form-control" id="inputQuestion" maxlength="3000" required></textarea>
+          <!-- <div class="valid-feedback">
+            大丈夫！
+          </div> -->
+          <div class="invalid-feedback">
+            入力必要！
+          </div>
+        </div>
+      </div>
+
+      <!-- Check Button -->
+      <div class="form-row mt-1">
+        <label></label>
+        <div class="col py-2">
+          <input class="btn btn-primary px-5" type="submit" onclick="passData()" value="確認" />
+        </div>
+      </div>
+    </form>
+
+    <!-- Fill sample button -->
+    <div class="form-row my-3 ml-2">
+      <label></label>
+      <div class="col">
+        <button class="btn btn-info px-4" onclick="fillAll()">サンプルデータ自動入力</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer class="row py-2 bg-dark mb-3" id="footer"></footer>
+
+  </div>
+
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function () {
+    $("#title").load("title.html");
+    $("#navbar").load("navbar.html");
+    $("#footer").load("footer.html");
+  })();
+
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    "use strict";
+    window.addEventListener(
+      "load",
+      function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName("needs-validation");
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      },
+      false
+    );
+  })();
+
+  function fillAll() {
+    document.getElementById("inputName1").value = "福田";
+    document.getElementById("inputName2").value = "氏";
+    document.getElementById("inputFurigana1").value = "フクダ";
+    document.getElementById("inputFurigana2").value = "シ";
+    document.getElementById("inputEmail").value = "tempnlh8@gmail.com";
+    document.getElementById("inputEmailCheck").value = "tempnlh8@gmail.com";
+    document.getElementById("inputPhoneNo").value = "080-1111-1111";
+    document.getElementById("inputPostCode").value = "111-0001";
+    document.getElementById("inputAddress").value = "新宿";
+    document.getElementById("inputQuestion").value = "問い合わせ";
+  }
+
+  function passData() {
+    var varName = document.getElementById("inputName1").value.toString() +
+      document.getElementById("inputName2").value.toString();
+    var varFurigna = document.getElementById("inputFurigana1").value.toString() +
+      document.getElementById("inputFurigana2").value.toString();
+    var varEmail = document.getElementById("inputEmail").value.toString();
+    var varPhoneNo = document.getElementById("inputPhoneNo").value.toString();
+    var varPostCode = document.getElementById("inputPostCode").value.toString();
+    var varAddress = document.getElementById("inputAddress").value.toString();
+    var varQuestion = document.getElementById("inputQuestion").value.toString();
+
+    localStorage.setItem("inName", varName);
+    localStorage.setItem("inFurigna", varFurigna);
+    localStorage.setItem("inEmail", varEmail);
+    localStorage.setItem("inPhoneNo", varPhoneNo);
+    localStorage.setItem("inPostCode", varPostCode);
+    localStorage.setItem("inAddress", varAddress);
+    localStorage.setItem("inQuestion", varQuestion);
+  };
+</script>
+
+</html>

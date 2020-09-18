@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>介護事業所</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+
+  <!-- Page Content -->
+  <div class="container" style="width: 65%; margin: 0 auto;">
+
+    <!-- Title -->
+    <div class="row pt-3 text-left">
+      <a href="index.html">
+        <img class="img-fluid" src="static/images/mine/logo2.jpg" width="280" height="65" alt="愛希訪問介護事業所" />
+      </a>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="row mt-3">
+      <nav class="col-lg-12 col-sm-12 pl-0 pr-0">
+        <ul class="nav nav-pills nav-fill bg-nav font-weight-bold">
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="index.html">トップ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="visiting-care.html">訪問介護</a>
+          </li>
+          <li class=" nav-item">
+            <a class="nav-link border border-dark" href="welfare-equipment.html">福祉用具</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="company-info.html">会社案内</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border border-dark" href="inquire.html">問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- This following cotent will be changed -->
+    <div class="my-4" style="text-align: center;">
+      <h4 style="font-weight: 600; color: darkblue;">
+        お問い合わせフォーム確認
+      </h4>
+    </div>
+
+    <!-- Check Table -->
+    <div class="row table-responsive-md my-3">
+      <table class="table table-bordered table-hover">
+        <tbody>
+          <tr>
+            <th scope="row">お名前&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputName"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              フリガナ
+            </th>
+            <td>
+              <p id="inputFurigana"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              メールアドレス&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputEmail"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">電話番号&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputPhoneNo"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">郵便番号&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputPostCode"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">ご住所&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputAddress"></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              お問い合わせ詳細&nbsp;<h style="color: red;">*</h>
+            </th>
+            <td>
+              <p id="inputQuestion"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Buttons -->
+    <div style="text-align: center;">
+      <!-- Return to Inquiry Page -->
+      <button class="btn btn-info px-4" onclick="window.history.go(-1); return false;">
+        戻る
+      </button>
+      <!-- Send -->
+      <button class="btn btn-info px-4" style="color: white;" onclick="sendEmail()">
+        送信
+      </button>
+    </div>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer class="row py-2 bg-dark mb-3" id="footer"></footer>
+  </div>
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  (function () {
+    $("#title").load("title.html");
+    $("#navbar").load("navbar.html");
+    $("#footer").load("footer.html");
+  })();
+
+  (function () {
+    var varName = localStorage.getItem("inName");
+    var varFurigna = localStorage.getItem("inFurigna");
+    var varEmail = localStorage.getItem("inEmail");
+    var varPhoneNo = localStorage.getItem("inPhoneNo");
+    var varPostCode = localStorage.getItem("inPostCode");
+    var varAddress = localStorage.getItem("inAddress");
+    var varQuestion = localStorage.getItem("inQuestion");
+
+    document.getElementById("inputName").innerHTML = varName;
+    document.getElementById("inputFurigana").innerHTML = varFurigna;
+    document.getElementById("inputEmail").innerHTML = varEmail;
+    document.getElementById("inputPhoneNo").innerHTML = varPhoneNo;
+    document.getElementById("inputPostCode").innerHTML = varPostCode;
+    document.getElementById("inputAddress").innerHTML = varAddress;
+    document.getElementById("inputQuestion").innerHTML = varQuestion;
+  })();
+
+  function sendEmail() {
+    var varName = localStorage.getItem("inName");
+    var varFurigna = localStorage.getItem("inFurigna");
+    var varEmail = localStorage.getItem("inEmail");
+    var varPhoneNo = localStorage.getItem("inPhoneNo");
+    var varPostCode = localStorage.getItem("inPostCode");
+    var varAddress = localStorage.getItem("inAddress");
+    var varQuestion = localStorage.getItem("inQuestion");
+
+    var today = new Date();
+    var date =
+      today.getFullYear() +
+      "-" +
+      (today.getMonth() + 1) +
+      "-" +
+      today.getDate();
+    var time =
+      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date + " " + time;
+    var stringDate = dateTime.toString();
+
+    console.log(varEmail);
+
+    var textToSend =
+      `<html>
+        <h2>お問い合わせありがとうございます。</h2>
+        <p>お客様のお問い合わせをできるだけ早く返信致します。</p>
+        <p>お問い合わせ内容　：　` +
+      varQuestion +
+      `</p>
+        <p>` +
+      stringDate +
+      `</p>
+      </html>
+      `;
+
+    var responseMessage = "";
+
+    Email.send({
+      SecureToken: "e7968994-6f69-4f8f-b661-44df21a74f42",
+      // Host: "smtp.mailtrap.io",
+      // Username: "58f3d2819b628a",
+      // Password: "89c566f89f8a66",
+      // Host: "smtp.elasticemail.com",
+      // Port: "2525",
+      // Username: "tempnlh8@gmail.com",
+      // Password: "5318F1EBCDA5A53A7C90EB56A851343A3688",
+      To: varEmail,
+      From: "tempnlh8@gmail.com",
+      Subject: "お問い合わせ完了お知らせ",
+      Body: textToSend,
+    }).then((message) => {
+      responseMessage = message;
+      if (responseMessage == "OK") {
+        window.location.href = "thankYou.html";
+      } else {
+        warn("メール送信エラー！");
+      }
+    });
+  }
+</script>
+
+</html>

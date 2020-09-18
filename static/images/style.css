@@ -1,0 +1,935 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:#333;
+	font-size:14px;
+}
+/*-----------------------フレームレイアウト制御部分--------------------------*/
+body {
+	PADDING-RIGHT: 0px; 
+	PADDING-LEFT: 0px; 
+	BACKGROUND:#fceff5 url(images/body-back.jpg) repeat-x; 
+	BACKGROUND-ATTACHMENT:fixed;
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 0px; 
+	COLOR: #313131; 
+	PADDING-TOP: 0px
+}
+#header-wrap {
+	LEFT: 0px; 
+	WIDTH: 100%; 
+	POSITION: fixed; 
+	TOP: 0px;
+	
+}
+#header-container {
+	HEIGHT: 30px; 
+	
+}
+#header {
+	MARGIN: 0px auto; 
+	WIDTH: 760px;
+	height:160px;/*★１に数値を合わせる*/
+	_height:155px;/*★２に数値を合わせる*/
+	POSITION: relative;
+}
+#container {
+	PADDING-RIGHT: 0px; 
+	PADDING-LEFT: 0px; 
+	FONT-SIZE: 1.4em; 
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 0px auto; 
+	OVERFLOW: auto; 
+	WIDTH: 760px; 
+	PADDING-TOP: 160px;/*★１に数値を合わせる*/
+	_PADDING-TOP: 155px;/*★２に数値を合わせる*/
+	background:white
+	
+}
+/*-----------------------コンテンツ全体--------------------------*/
+#contents{
+	background:white url(images/contents-back.gif) repeat-y 0px 5px;
+	text-align:left;
+	width:760px;
+	margin:0px auto;
+	padding:0px 0px;
+	position:relative;
+	clear:both;
+	/*overflow:auto;*//*ブラウザの互換性のための設定*/
+}
+/*--------------------------ヘッター---------------------------*/
+#header h1{
+	text-align:left;
+	padding:15px 10px 16px;
+	_padding:17px 10px 18px;
+	margin:0;
+	background:url(images/header-back.jpg) no-repeat 0 0;
+}
+h1 a,h1 a:link,h1 a:visited,h1 a:hover{
+	color:#999;
+	font-size:11px;
+	font-weight:normal;
+}
+#header h2{
+	margin:0;
+	padding:2px;
+	text-align:center;
+	background:#fceff5;
+}
+#header h2 a,#header h2 a:link,#header h2 a:visited,#header h2 a:hover{
+	font-size:11px;
+	color:#6c5445;
+	font-weight:normal;
+	text-decoration:none;
+}
+/*
+h2{
+	color:#6282bc;
+	font-size:11px;
+	padding:5px 5px;
+	margin:0px;
+	font-weight:normal;
+	text-align:left;
+	background:white;
+}
+*/
+/*----------------------ページの見出し・フラッシュ----------------------------------*/
+h2#TopImage{
+	width:760px;
+	margin:0px 0 0px;
+	padding:5px 0;
+	vertical-align:bottom;
+	text-align:center;
+	background:white;
+}
+h2#TopImage a img{
+	margin:0px 0px;
+	padding:0px;
+	border:none;
+	vertical-align:bottom;
+}
+/*-----------------------メインエリア--------------------------*/
+a img{
+	border:none;
+}
+a{
+	color:#f90;
+	text-decoration:underline;
+}
+a:link{
+	color:#f90;
+	text-decoration:underline;
+}
+a:visited{
+	color:#f90;
+}
+a:hover{
+	color:silver;
+}
+p{
+	padding:6px 10px;
+	color:#666;
+	line-height:140%;
+}
+span{
+	font-weight:bold;
+	color:#f90;
+}
+span.caution{
+	font-weight:normal;
+	font-size:12px;
+	color:#999;
+}
+.red{
+	color:red;
+	font-weight:normal;
+}
+.blue{
+	color:blue;
+	font-weight:normal;
+}
+.green{
+	color:green;
+	font-weight:normal;
+}
+.black{
+	color:#666;
+	font-weight:bold;
+}
+.ash{
+	color:#999;
+	font-weight:normal;
+}
+ul{
+	margin:10px 20px 20px 30px;
+	list-style-type:disc;
+}
+ul li{
+	margin:5px 20px 0px 10px;
+	line-height:130%;
+	color:#6f4924;
+}
+ul.number{
+	list-style-type:decimal;
+	margin:20px 20px 20px 30px;
+}
+ul.number li{
+	margin:10px 20px 0px 20px;
+	line-height:130%;
+	color:#006;
+}
+table{
+	width:auto;
+	border:1px solid #999;
+	border-collapse:collapse;
+	margin:10px
+}
+table caption{
+	font-size:15px;
+	font-weight:bold;
+	color:red;
+	text-align:left;
+	padding-bottom:5px;
+}
+table tr{
+
+}
+table tr th{
+	padding:5px 10px;
+	border:1px solid #ccc;
+	text-align:center;
+	white-space:nowrap;
+	color:#006;
+	background:#eee;
+}
+table tr.PinkTH th{
+	background:#fdd;
+}
+table tr.YellowTH th{
+	background:#ffd;
+}
+table tr th a{color:#6c6;text-decoration:none;}
+table tr th a:link{}
+table tr th a:visited{}
+table tr th a:hover{}
+
+table tr td{
+	text-align:left;
+	padding:5px;
+	border:1px solid #ccc;
+	color:#666;
+	line-height:130%;
+	/*letter-spacing:0.1em;*/
+}
+table tr td.center{
+	text-align:center;
+}
+table tr td.right{
+	text-align:right;
+}
+table.ScheduleTable{
+	width:auto;
+	border:1px solid #999;
+	border-collapse:collapse;
+	margin:10px
+}
+table.ScheduleTable caption{
+	font-size:15px;
+	font-weight:bold;
+	color:red;
+	text-align:left;
+	padding-bottom:5px;
+}
+table.ScheduleTable tr{
+
+}
+table.ScheduleTable tr th{
+	padding:5px 10px;
+	border:1px solid #ccc;
+	text-align:center;
+	white-space:nowrap;
+	color:#555;
+	background:#eee;
+}
+table.ScheduleTable tr.PinkTH th{
+	background:#fdd;
+}
+table.ScheduleTable tr.YellowTH th{
+	background:#ffd;
+}
+table.ScheduleTable tr th a{color:#6c6;text-decoration:none;}
+table.ScheduleTable tr th a:link{}
+table.ScheduleTable tr th a:visited{}
+table.ScheduleTable tr th a:hover{}
+
+table.ScheduleTable tr td{
+	text-align:center;
+	padding:5px;
+	border:1px solid #ccc;
+	color:#666;
+	line-height:130%;
+	/*letter-spacing:0.1em;*/
+}
+table.ScheduleTable tr td.center{
+	text-align:center;
+}
+table.ScheduleTable tr td.right{
+	text-align:right;
+}
+table.PriceTable{
+	width:auto;
+	border:1px solid #999;
+	border-collapse:collapse;
+	margin:10px
+}
+table.PriceTable caption{
+	font-size:15px;
+	font-weight:bold;
+	color:red;
+	text-align:left;
+	padding-bottom:5px;
+}
+table.PriceTable tr{
+
+}
+table.PriceTable tr th{
+	padding:5px 10px;
+	border:1px solid #ccc;
+	text-align:center;
+	white-space:nowrap;
+	color:#555;
+	background:#eee;
+}
+table.PriceTable tr.PinkTH th{
+	background:#fdd;
+}
+table.PriceTable tr.YellowTH th{
+	background:#ffd;
+}
+table tr th a{color:#6c6;text-decoration:none;}
+table tr th a:link{}
+table tr th a:visited{}
+table tr th a:hover{}
+
+table.PriceTable tr td{
+	text-align:right;
+	padding:5px;
+	border:1px solid #ccc;
+	color:#666;
+	line-height:130%;
+	/*letter-spacing:0.1em;*/
+}
+table.PriceTable tr td.center{
+	text-align:center;
+}
+table.PriceTable tr td.right{
+	text-align:right;
+}
+.RightImage,.RightImage150,.RightImage200,.RightImage240,.RightImage250,.RightImage300,.RightImage350,.RightImage360{
+	float:right;
+	width:180px;
+	margin:10px;
+	/*border:1px solid #000;*/
+	padding:0px;
+}
+.RightImage150{
+	width:150px;
+}
+.RightImage200{
+	width:200px;
+}
+.RightImage240{
+	width:240px;
+}
+.RightImage250{
+	width:250px;
+}
+.RightImage300{
+	width:300px;
+}
+.RightImage350{
+	width:350px;
+}
+.RightImage360{
+	width:360px;
+}
+.RightImage400{
+	width:400px;
+}
+.LeftImage60,.LeftImage100,.LeftImage150,.LeftImage180,.LeftImage200,.LeftImage250,.LeftImage392{
+	float:left;
+	width:60px;
+	margin:0 5px 0 0;
+	/*border:1px solid #000;*/
+	padding:0px;
+}
+.LeftImage100{
+	width:100px;
+}
+.LeftImage150{
+	width:150px;
+}
+.LeftImage180{
+	width:180px;
+}
+.LeftImage200{
+	width:200px;
+}
+.LeftImage250{
+	width:250px;
+}
+.LeftImage392{
+	width:392px;
+}
+.return{
+	text-align:right;
+	clear:both;
+}
+.return a{
+	color:#2f589a;
+	text-decoration:underline;
+}
+.return a:link{
+	color:#2f589a;
+	text-decoration:underline;
+}
+.return a:visited{
+	color:#2f589a;
+	text-decoration:underline;
+}
+.return a:hover{
+	color:skyblue;
+	text-decoration:underline;
+}
+.center{
+	text-align:center
+}
+dl{
+	margin-bottom:30px;
+}
+dt,dd{
+	border-bottom:1px dashed #ccc;
+	padding:5px 10px 2px;
+	margin:10px 20px;
+}
+dt{
+	margin-top:20px;
+	color:#600;
+	font-weight:bold;
+}
+dd{
+	padding-left:30px;
+	color:#666;
+}
+dt a{
+	font-size:16px;
+	font-weight:bold;
+	letter-spacing:0.2em;
+	color:#006;
+	text-decoration:none;
+}
+dd a{
+	color:#006;
+	text-decoration:none;
+}
+strong{
+	color:#006;
+	font-weight:bold;
+}
+em{
+	font-style:normal;
+	color:olive;
+	font-weight:normal;
+}
+/*----------------------中央のエリア----------------------------------*/
+#CenterAera{
+	width:565px;
+	height:auto;
+	margin:0px 10px 0 0px;
+	_margin:0px 0px 0 0px;
+	padding:10px 0px;
+	float:right;
+}
+#CenterAera h3{
+	
+}
+#CenterAera h4{
+	color:#333;
+	margin:10px 10px 0;
+}
+#CenterAera p{
+	padding:10px;
+	margin:0;
+	color:#666;
+	font-size:14px;
+	font-weight:normal;
+}
+#CenterAera p.MainText{
+	padding:6px 10px;
+	margin:13px 30px 0;
+	font-size:14px;
+	color:#666;
+	line-height:180%;
+}
+#CenterAera p.SupportBox{
+	margin:20px 30px;
+	padding:10px;
+	border:3px dotted #fcc;
+	line-height:150%;
+	background:#ffe;
+	color:brown;
+	font-size:13px;
+}
+#CenterAera p.return{
+	padding:0px 10px 0 0;
+	margin:0;
+}
+#CenterAera p.return a{
+	color:orange;
+	text-decoration:underline;
+}
+#CenterAera p.return a:link{
+	color:orange;
+}
+#CenterAera p.return a:visited{
+	color:orange;
+}
+#CenterAera p.return a:hover{
+	color:#ccc;
+}
+#CenterAera p.question{
+	clear:both;
+	color:red;
+	border-left:8px solid #6c6;
+	border-right:8px solid #6c6;
+	background:#eee;
+	margin:10px 10px 0;
+}
+#CenterAera p.answer{
+	color:#006;
+	border-left:8px solid #6c6;
+	border-right:8px solid #6c6;
+	background:#efe;
+	margin:0px 10px 30px;
+}
+/*-----------------------サービス案内～トップページ（index.html）～--------------------------*/
+#CenterAera #IndexBox{
+	background:url(images/indexbox-back.jpg) no-repeat right bottom;
+	overflow:auto;
+	_height:1%;
+	margin:10px 5px 10px 0px;
+}
+#CenterAera #IndexBox p{
+	font-size:13px;
+	color:#666;
+	clear:both;
+}
+#CenterAera .category{
+	width:270px;
+	height:130px;
+	margin:3px 5px 5px 3px;
+	background:url(images/category-back.jpg) no-repeat 0 0;
+	float:left;
+	clear:none;
+}
+#CenterAera .category h4{
+	color:#8bb966;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:0.1em;
+	margin:0px;
+	padding:5px 0 0;
+	clear:none;
+	text-align:center;
+}
+#CenterAera .category h4 a,#CenterAera .category h4 a:link,#CenterAera .category h4 a:visited,#CenterAera .category h4 a:hover{
+	color:#8bb966;
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:0.1em;
+}
+#CenterAera .category h4 a img{
+	margin:0 0px;
+	width:120px;
+	float:none;
+}
+#CenterAera .category h5{
+	margin:10px 5px 0;
+	float:none;
+}
+#CenterAera .category h5 img{
+	margin:0 0px;
+	width:160px;
+	float:none;
+}
+#CenterAera .category a img{
+	margin:0 10px;
+	width:85px;
+	float:right;
+}
+#CenterAera #IndexBox .category p{
+	margin:5px;
+	padding:0 5px;
+	line-height:125%;
+	letter-spacing:0.1em;
+	color:#666;
+	font-size:13px;
+	clear:none;
+}
+/*-----------------------更新情報・お知らせ--------------------------*/
+#News{
+	margin:20px 5px 15px;
+	padding:0px 0 5px;
+}
+#News dl{
+	margin:0px 3px; 5px;
+	padding:0px 5px 0 5px;
+}
+#News dl dt{
+	padding:0px 0px;
+	margin:5px 0px 5px;
+	color:#630;
+	font-size:14px;
+	font-weight:bold;
+	border:none;
+	vertical-align:bottom;
+}
+#News dl dt strong,#News dl dt span{
+	background:#be4969;
+	width:80px;
+	height:13px;
+	_height:17px;
+	color:white;
+	font-size:13px;
+	font-weight:normal;
+	text-align:center;
+	padding:3px 0 1px;
+	margin:-3px 7px 0 0;
+	display:block;
+	float:left;
+	vertical-align:top;
+	/*border:1px solid red;*/
+}
+#News dl dt span{
+	color:white;
+	background:#7e695c;
+	/*border:1px solid #5764ae;*/
+}
+#News dl dd{
+	padding:0 5px 10px 90px;
+	margin:0px 0px 15px 0px;
+	color:#666;
+	font-size:13px;
+	border-bottom:1px solid #ccc;
+	line-height:130%;
+	clear:both;
+}
+#News dl dd strong{
+	font-size:14px;
+	color:red;
+}
+#News dl dd a{
+	color:#f90;
+	font-size:14px;
+	text-decoration:underline;
+}
+#News dl dd a:link{
+	color:#f90;
+}
+#News dl dd a:visited{
+	color:#f90;
+}
+#News dl dd a:hover{
+	color:#ccc;
+	text-decoration:underline;
+}
+#News dl dd a img{
+	border:none;
+}
+/*----------------------右のエリア----------------------------------*/
+#LeftAera{
+	width:170px;
+	_width:180px;
+	margin:0px;
+	padding:10px 5px 0 5px;
+	float:left;
+}
+#LeftAera #AddressBox{
+	border:1px solid #ccc;
+	margin:10px 5px;
+	background:#fdfef6;
+	_height:1%;
+}
+#LeftAera #AddressBox address,#LeftAera #AddressBox p{
+	font-size:11px;
+	font-style:normal;
+	color:#666;
+	padding:8px;
+	line-height:110%;
+}
+#LeftAera #AddressBox p strong{
+	font-size:12px;
+	color:#666;
+}
+#LeftAera h3{
+	width:auto;
+	padding:3px;
+	margin:3px;
+	text-align:center;
+	font-size:13px;
+	color:#6c5445;
+	background:#f1e5de;
+	letter-spacing:0.1em;
+	clear:both;
+}
+#LeftAera h3 a{
+	color:#666;
+	font-size:16px;
+	text-decoration:none;
+}
+#LeftAera h3 a:link,#LeftAera h3 a:visited,#LeftAera h3 a:hover{
+	color:#666;
+	text-decoration:none;
+}
+#LeftAera h4{
+	margin:10px;
+}
+#LeftAera .AddressBox address{
+	font-size:11px;
+	font-style:normal;
+	color:#666;
+	padding:5px 10px;
+	line-height:110%;
+}
+#LeftAera .AddressBox p{
+	font-size:11px;
+	font-style:normal;
+	color:#666;
+	padding:5px 10px;
+	line-height:110%;
+}
+#LeftAera p.return{
+	text-align:right;
+	padding:0px 5px;
+	border:none;
+}
+#LeftAera a img{
+	border:none;
+}
+/*-----------------------バナー--------------------------*/
+ul#BannerBox{
+	list-style:none;
+	margin:0px 0 0;
+	padding:0px;
+	clear:both;
+}
+ul#BannerBox li{
+	margin:5px 0px 0px;
+	text-align:center;
+}
+/*------------------------メインナビゲーション----------------------------*/
+#menu{
+	width:760px;
+	height:39px;
+	padding:0px 0 0 0;
+	margin:0px 0 0 0px;
+}
+#menu ul{
+	list-style:none;
+	margin:0px 0 0 0px;
+	padding:0px;
+}
+#menu ul li{
+	margin:0px;
+	padding:0px;
+	display:block;
+	float:left;
+	text-indent:-9999px;
+}
+#menu ul li a{
+	width:127px;
+	height:39px;
+	padding:0px;
+	margin:0px 0px;
+	display:block;
+	color:#573c1e;
+	font-size:14px;
+	text-decoration:none;
+}
+#menu ul li#navi01 a,#menu ul li#navi06 a{
+	width:126px;
+}
+#menu ul li a:link{
+	color:#573c1e;
+}
+#menu ul li a:visited{
+	color:#573c1e;
+}
+#menu ul li a:hover{
+	color:red;
+}
+#menu ul li#navi01 a:link{
+	background:url(images/navi-back.jpg) 0px 0px;
+}
+#menu ul li#navi01 a:visited{
+	background:url(images/navi-back.jpg) 0px 0px;
+}
+#menu ul li#navi01 a:hover{
+	background:url(images/navi-back.jpg) 0px -39px;
+}
+#menu ul li#navi02 a:link{
+	background:url(images/navi-back.jpg) -126px 0px;
+}
+#menu ul li#navi02 a:visited{
+	background:url(images/navi-back.jpg) -126px 0px;
+}
+#menu ul li#navi02 a:hover{
+	background:url(images/navi-back.jpg) -126px -39px;
+}
+#menu ul li#navi03 a:link{
+	background:url(images/navi-back.jpg) -253px 0px;
+}
+#menu ul li#navi03 a:visited{
+	background:url(images/navi-back.jpg) -253px 0px;
+}
+#menu ul li#navi03 a:hover{
+	background:url(images/navi-back.jpg) -253px -39px;
+}
+#menu ul li#navi04 a:link{
+	background:url(images/navi-back.jpg) -380px 0px;
+}
+#menu ul li#navi04 a:visited{
+	background:url(images/navi-back.jpg) -380px 0px;
+}
+#menu ul li#navi04 a:hover{
+	background:url(images/navi-back.jpg) -380px -39px;
+}
+#menu ul li#navi05 a:link{
+	background:url(images/navi-back.jpg) -507px 0px;
+}
+#menu ul li#navi05 a:visited{
+	background:url(images/navi-back.jpg) -507px 0px;
+}
+#menu ul li#navi05 a:hover{
+	background:url(images/navi-back.jpg) -507px -39px;
+}
+#menu ul li#navi06 a:link{
+	background:url(images/navi-back.jpg) -634px 0px;
+}
+#menu ul li#navi06 a:visited{
+	background:url(images/navi-back.jpg) -634px 0px;
+}
+#menu ul li#navi06 a:hover{
+	background:url(images/navi-back.jpg) -634px -39px;
+}
+/*------------------------サブナビゲーション----------------------------*/
+#SubNavi{
+	width:270px;
+	margin:0px auto;
+	padding:0px 0 0;
+	text-align:center;
+	position:absolute;
+	top:6px;
+	right:0;
+}
+#SubNavi ul{
+	list-style:none;
+	margin:0px auto;
+	padding:0px 0px;
+}
+#SubNavi ul li{
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	height:auto;
+	display:block;
+	float:left;
+}
+#SubNavi ul li a{
+	width:80px;
+	padding:1px 0 1px;
+	margin:0;
+	color:white;
+	font-size:12px;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+	background:url(images/subnavi-back.gif) no-repeat center top;
+	display:block;
+}
+#SubNavi ul li a:link{
+	color:white;
+}
+#SubNavi ul li a:visited{
+	color:white;
+}
+#SubNavi ul li a:hover{
+	color:silver;
+	text-decoration:underline;
+}
+/*------------------------フッター----------------------------*/
+div#footer{
+	font-size:12px;
+	color:white;
+	text-align:center;
+	margin:0px 0 0px;
+	padding:5px 0 20px;
+	background:#fceff5;
+	clear:both;
+}
+div#footer p{
+	margin:0px auto;
+	padding:5px 0 5px;
+	width:760px;
+	color:#7e695c;
+	font-size:12px;
+	font-style:normal;
+	line-height:120%;
+	text-align:center;
+}
+/*------------------------サイトマップ----------------------------*/
+dl#L_sitemap,dl#R_sitemap{
+	width:260px;
+	margin:0px 5px;
+	padding:0px;
+	/*border:1px solid #000;*/
+}
+
+dl#L_sitemap dt,dl#L_sitemap dd{
+	margin-left:0px;
+	margin-right:0px;
+}
+dl#R_sitemap dt,dl#R_sitemap dd{
+	margin-left:0px;
+	margin-right:0px;
+}
+dl#L_sitemap{
+	float:left;
+}
+dl#R_sitemap{
+	float:right;
+}
+dl#L_sitemap dt a,dl#L_sitemap dt a:link,dl#L_sitemap dd a:visited{
+	color:#999;
+}
+dl#L_sitemap dt a:hover{
+	color:#f66;
+}
+dl#L_sitemap dd a,dl#L_sitemap dd a:link,dl#L_sitemap dd a:visited{
+	color:#999;
+}
+dl#L_sitemap dd a:hover{
+	color:#f66;
+}
+dl#R_sitemap dt a,dl#R_sitemap dt a:link,dl#R_sitemap dd a:visited{
+	color:#999;
+}
+dl#R_sitemap dt a:hover{
+	color:#f66;
+}
+dl#R_sitemap dd a,dl#R_sitemap dd a:link,dl#R_sitemap dd a:visited{
+	color:#999;
+}
+dl#R_sitemap dd a:hover{
+	color:#f66;
+}
