@@ -1,10 +1,10 @@
 # kaigoService
 介護にウェブサイト開発
 
-## プロジェクトについて
-普通のスタティックウェブサイトです。
-①　HTML5
-②　CSS
-③　Javascript
-④　Jquery
-⑤　Bootstrap4
+### プロジェクトについて
+普通のスタティックウェブサイトです。<br/>
+①　HTML5<br/>
+②　CSS<br/>
+③　Javascript<br/>
+④　Jquery<br/>
+⑤　Bootstrap4<br/>
